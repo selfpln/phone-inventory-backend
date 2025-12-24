@@ -1,9 +1,5 @@
 import { google } from "googleapis";
 
-if (!process.env.GOOGLE_SERVICE_ACCOUNT) {
-  throw new Error("GOOGLE_SERVICE_ACCOUNT missing");
-}
-
 const credentials = JSON.parse(process.env.GOOGLE_SERVICE_ACCOUNT);
 
 const auth = new google.auth.GoogleAuth({
